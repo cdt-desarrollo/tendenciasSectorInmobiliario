@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="assets/faviconCEMDI.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Encuesta Sector Inmobiliario</title>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="https://www.facebook.com/CEMDI.METROPOLITANO" target="_blank">
+      <img src="assets/faviconCEMDI.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      CEMDI
+    </a>
+  </nav>
+  <div class="container-fluid d-grid gap-2" id="deleteDiv">
+    <div>
+      <h1 class="text-left">Centro Metropolitano de Información Económica y Empresarial - Encuesta Sector Inmobiliario 2022</h1>
+      <h4 class="text-justify">Agradecemos de su apoyo en contestar la siguiente encuesta, sus respuestas nos ayudarán para conocer la situación en el sector inmobiliario y posteriormente generar un registro histórico.
+      </h4>
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Empresa</span>
+      </div>
+      <input type="text" id ="companyName" class="form-control" required>
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Nombre completo</span>
+      </div>
+      <input type="text" id ="staffName" class="form-control" required>
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Correo</span>
+      </div>
+      <input type="text" id ="email" class="form-control" required>
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <span class="input-group-text bg-dark text-white" id="inputGroup-sizing-default">Teléfono</span>
+      </div>
+      <input type="text" id ="phone" class="form-control" required>
+    </div>
+    <div class="q1">
+      <h5>1.- Represento/trabajo:</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" checked value="agenteIndependiente">
+        <label class="form-check-label">
+          Agente independiente
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" value="agenteEnAgenciaInmboliaria">
+        <label class="form-check-label">
+          Agente en agencia inmobiliaria
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" value="desarrolloInmobiliario">
+        <label class="form-check-label">
+          Desarrollo inmobiliario
+        </label>
+      </div>
+    </div>
+    <div class="q2">
+      <h5>2.- <strong>Durante el 2022</strong>, ¿cuántas unidades de <strong>condominios</strong> vendiste?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" checked value="1a5">
+        <label class="form-check-label">
+          1 a 5
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" value="5a10">
+        <label class="form-check-label">
+          5 a 10
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" value="10a15">
+        <label class="form-check-label">
+          10 a 15
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" value="15a20">
+        <label class="form-check-label">
+          15 a 20
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" value="20a25">
+        <label class="form-check-label">
+          20 a 25
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" value="30a35">
+        <label class="form-check-label">
+          30 a 35
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" value="35a40">
+        <label class="form-check-label">
+          35 a 40
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" value="40a45">
+        <label class="form-check-label">
+          40 a 45+
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" value="0">
+        <label class="form-check-label">
+          No tengo
+        </label>
+      </div>
+    </div>
+    <div class="q3">
+      <h5>3.- <strong>Durante el 2022</strong>, ¿cuántas unidades de <strong>casas</strong> vendiste?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" checked value="1a5">
+        <label class="form-check-label">
+          1 a 5
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" value="5a10">
+        <label class="form-check-label">
+          5 a 10
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" value="10a15">
+        <label class="form-check-label">
+          10 a 15
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" value="15a20">
+        <label class="form-check-label">
+          15 a 20
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" value="20a25">
+        <label class="form-check-label">
+          20 a 25
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" value="30a35">
+        <label class="form-check-label">
+          30 a 35
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" value="35a40">
+        <label class="form-check-label">
+          35 a 40
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" value="40a45">
+        <label class="form-check-label">
+          40 a 45+
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" value="0">
+        <label class="form-check-label">
+          No tengo
+        </label>
+      </div>
+    </div>
+    <div class="q4">
+      <h5>4.- <strong>Durante el 2022</strong>, ¿cuántas unidades de <strong>lotes</strong> vendiste?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" checked value="1a5">
+        <label class="form-check-label">
+          1 a 5
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" value="5a10">
+        <label class="form-check-label">
+          5 a 10
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" value="10a15">
+        <label class="form-check-label">
+          10 a 15
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" value="15a20">
+        <label class="form-check-label">
+          15 a 20
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" value="20a25">
+        <label class="form-check-label">
+          20 a 25
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" value="30a35">
+        <label class="form-check-label">
+          30 a 35
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" value="35a40">
+        <label class="form-check-label">
+          35 a 40
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" value="40a45">
+        <label class="form-check-label">
+          40 a 45+
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" value="0">
+        <label class="form-check-label">
+          No tengo
+        </label>
+      </div>
+    </div>
+    <div class="q5">
+      <h5>5.- ¿Cuál es el promedio de <u>precio total de venta</u> de los <strong>condominios</strong> en tu inventario?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" checked value="100Ka150K">
+        <label class="form-check-label">
+          $100K a $150K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="150Ka200K">
+        <label class="form-check-label">
+          $150K a $200K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="200Ka250K">
+        <label class="form-check-label">
+          $200K a $250K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="250Ka300K">
+        <label class="form-check-label">
+          $250K a $300K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="300Ka350K">
+        <label class="form-check-label">
+          $300K a $350K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="350Ka400K">
+        <label class="form-check-label">
+          $350K a $400K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="400Ka450K">
+        <label class="form-check-label">
+          $400K a $450K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="450Ka500K">
+        <label class="form-check-label">
+          $450K a $500K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="500K+">
+        <label class="form-check-label">
+          $500K+
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="0">
+        <label class="form-check-label">
+          Ninguno, no vendo condominios.
+        </label>
+      </div>
+    </div>
+    <div class="q6">
+      <h5>6.- ¿Cuál es el promedio de <u>precio total de venta</u> de las <strong>casas</strong> en tu inventario?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" checked value="100Ka150K">
+        <label class="form-check-label">
+          $100K a $150K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="150Ka200K">
+        <label class="form-check-label">
+          $150K a $200K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="200Ka250K">
+        <label class="form-check-label">
+          $200K a $250K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="250Ka300K">
+        <label class="form-check-label">
+          $250K a $300K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="300Ka350K">
+        <label class="form-check-label">
+          $300K a $350K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="350Ka400K">
+        <label class="form-check-label">
+          $350K a $400K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="400Ka450K">
+        <label class="form-check-label">
+          $400K a $450K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="450Ka500K">
+        <label class="form-check-label">
+          $450K a $500K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="500K+">
+        <label class="form-check-label">
+          $500K+
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="0">
+        <label class="form-check-label">
+          Ninguno, no vendo casas.
+        </label>
+      </div>
+    </div>
+    <div class="q7">
+      <h5>7.- ¿Cuál es el promedio de <u>precio total de venta</u> de los <strong>lotes</strong> en tu inventario?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" checked value="20Ka100K">
+        <label class="form-check-label">
+          $20K a $100K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="100Ka150K">
+        <label class="form-check-label">
+          $100K a $150K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="150Ka200K">
+        <label class="form-check-label">
+          $150K a $200K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="200Ka250K">
+        <label class="form-check-label">
+          $200K a $250K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="250Ka300K">
+        <label class="form-check-label">
+          $250K a $300K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="300Ka350K">
+        <label class="form-check-label">
+          $300K a $350K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="350Ka400K">
+        <label class="form-check-label">
+          $350K a $400K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="400Ka450K">
+        <label class="form-check-label">
+          $400K a $450K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="450Ka500K">
+        <label class="form-check-label">
+          $450K a $500K
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="500K+">
+        <label class="form-check-label">
+          $500K+
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="0">
+        <label class="form-check-label">
+          Ninguno, no vendo lotes.
+        </label>
+      </div>
+    </div>
+    <div class="q8">
+      <h5>8.- ¿Qué porcentaje de tus clientes colocaron su propiedad en aplicaciones para rentas vacacionales a corto y largo plazo?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" checked value="0%">
+        <label class="form-check-label">
+          0%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="10%">
+        <label class="form-check-label">
+          10%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="20%">
+        <label class="form-check-label">
+          20%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="30%">
+        <label class="form-check-label">
+          30%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="40%">
+        <label class="form-check-label">
+          40%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="50%">
+        <label class="form-check-label">
+          50%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="60%">
+        <label class="form-check-label">
+          60%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="70%">
+        <label class="form-check-label">
+          70%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="80%">
+        <label class="form-check-label">
+          80%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="90%">
+        <label class="form-check-label">
+          90%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="100%+">
+        <label class="form-check-label">
+          100%
+        </label>
+      </div>
+      
+    </div>
+    <div class="q9">
+      <h5>9.- ¿Qué porcentaje de mi inventario disponible tengo listo para entrega inmediata y escritura?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" checked value="0%">
+        <label class="form-check-label">
+          0%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="10%">
+        <label class="form-check-label">
+          10%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="20%">
+        <label class="form-check-label">
+          20%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="30%">
+        <label class="form-check-label">
+          30%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="40%">
+        <label class="form-check-label">
+          40%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="50%">
+        <label class="form-check-label">
+          50%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="60%">
+        <label class="form-check-label">
+          60%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="70%">
+        <label class="form-check-label">
+          70%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="80%">
+        <label class="form-check-label">
+          80%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="90%">
+        <label class="form-check-label">
+          90%
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="100%+">
+        <label class="form-check-label">
+          100%
+        </label>
+      </div>
+      
+    </div>
+    <div class="q10">
+      <h5>10.- La forma de pago que más se presento durante <strong>2022</strong> fue...</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q10" checked value="contado">
+        <label class="form-check-label">
+          Contado
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q10" value="creditoBancario">
+        <label class="form-check-label">
+          Crédito bancario
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q10" value="financiamientoDirectoPorElVendedor">
+        <label class="form-check-label">
+          Financimiento director por el vendedor
+        </label>
+      </div>
+    </div>
+    <div class="q11">
+      <h5>11.- En su mayoría, <strong>durante el 2022</strong> la edad promedio de mis clientes fue...</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q11" checked value="25a35">
+        <label class="form-check-label">
+          25 a 35 años
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q11" value="35a45">
+        <label class="form-check-label">
+          35 a 45 años
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q11" value="45a55">
+        <label class="form-check-label">
+          45 a 55 años
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q11" value="55a65">
+        <label class="form-check-label">
+          55 a 65 años
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q11" value="65a75">
+        <label class="form-check-label">
+          65 a 75 años
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q11" value="75+">
+        <label class="form-check-label">
+          75 años +
+        </label>
+      </div>
+    </div>
+    <div class="q12">
+      <h5>12.- En su mayoría los compradores te visitan de...</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q12" checked value="californiaUsa">
+        <label class="form-check-label">
+          California (USA)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q12" value="tijuana">
+        <label class="form-check-label">
+          Tijuana
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q12" value="mexicali">
+        <label class="form-check-label">
+          Mexicali
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q12" value="centroDelPais">
+        <label class="form-check-label">
+          Del centro del país
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input d-flex" type="radio" name="q12" value="" id="otros1" onclick="escribirCiudad()">
+        <label class="form-check-label">
+          Otros:
+          <div id="insertCity"></div>
+        </label>
+      </div>
+    </div>
+    <div class="q13">
+      <h5>13.- ¿Cuántas <strong>casas</strong>, tengo disponibles a la venta actualmente?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q13" checked value="5a10">
+        <label class="form-check-label">
+          5 a 10 
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q13" value="10a15">
+        <label class="form-check-label">
+          10 a 15
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q13" value="15a30">
+        <label class="form-check-label">
+          15 a 30
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q13" value="30a50">
+        <label class="form-check-label">
+          30 a 50
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q13" value="50a70">
+        <label class="form-check-label">
+          50 a 70
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q13" value="70a100">
+        <label class="form-check-label">
+          70 a 100
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q13" value="100a150">
+        <label class="form-check-label">
+          100 a 150
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q13" value="150a200">
+        <label class="form-check-label">
+          150 a 200
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q13" value="0">
+        <label class="form-check-label">
+          Ninguno
+        </label>
+      </div>
+    </div>
+    <div class="q14">
+      <h5>14.- ¿Cuántos <strong>condominios</strong>, tengo disponibles a la venta actualmente?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q14" checked value="5a10">
+        <label class="form-check-label">
+          5 a 10 
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q14" value="10a15">
+        <label class="form-check-label">
+          10 a 15
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q14" value="15a30">
+        <label class="form-check-label">
+          15 a 30
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q14" value="30a50">
+        <label class="form-check-label">
+          30 a 50
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q14" value="50a70">
+        <label class="form-check-label">
+          50 a 70
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q14" value="70a100">
+        <label class="form-check-label">
+          70 a 100
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q14" value="100a150">
+        <label class="form-check-label">
+          100 a 150
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q14" value="150a200">
+        <label class="form-check-label">
+          150 a 200
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q14" value="0">
+        <label class="form-check-label">
+          Ninguno
+        </label>
+      </div>
+    </div>
+    <div class="q15">
+      <h5>15.- ¿Cuántos <strong>lotes</strong>, tengo disponibles a la venta actualmente?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q15" checked value="5a10">
+        <label class="form-check-label">
+          5 a 10 
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q15" value="10a15">
+        <label class="form-check-label">
+          10 a 15
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q15" value="15a30">
+        <label class="form-check-label">
+          15 a 30
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q15" value="30a50">
+        <label class="form-check-label">
+          30 a 50
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q15" value="50a70">
+        <label class="form-check-label">
+          50 a 70
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q15" value="70a100">
+        <label class="form-check-label">
+          70 a 100
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q15" value="100a150">
+        <label class="form-check-label">
+          100 a 150
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q15" value="150a200">
+        <label class="form-check-label">
+          150 a 200
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q15" value="0">
+        <label class="form-check-label">
+          Ninguno
+        </label>
+      </div>
+    </div>
+    <div class="q16">
+      <h5>16.- Los compradores en su mayoría</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q16" checked value="compranParaVivir">
+        <label class="form-check-label">
+          Compran para vivir
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q16" value="compranParaRentar">
+        <label class="form-check-label">
+          Compran para rentar
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q16" value="compranComoSecondHome">
+        <label class="form-check-label">
+          Compran como second home
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input d-flex" type="radio" name="q16" value="" id="otros2" onclick="escribirUso()">
+        <label class="form-check-label">
+          Otros:
+          <div id="insertUse"></div>
+        </label>
+      </div>
+    </div>
+    <div class="q17">
+      <h5>17.- <strong>Durante el año 2022</strong>, la mayor parte de los clientes los generé por...</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q17" checked value="internetYredesSociales">
+        <label class="form-check-label">
+          Internet y redes sociales
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q17" value="referidos">
+        <label class="form-check-label">
+          Referidos
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q17" value="llamada">
+        <label class="form-check-label">
+          Llamada
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q17" value="terrestre">
+        <label class="form-check-label">
+          Terrestre (walk-in)
+        </label>
+      </div>
+    </div>
+    <div class="q18">
+      <h5>18.- <strong>En el caso de desarrolladores o fraccionamientos</strong>, ¿qué promedio de visitas semanales recibiste?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q18" checked value="1a6">
+        <label class="form-check-label">
+          1 a 6 visitas
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q18" value="6a12">
+        <label class="form-check-label">
+          6 a 12
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q18" value="12a18">
+        <label class="form-check-label">
+          12 a 18
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q18" value="18a24">
+        <label class="form-check-label">
+          18 a 24
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q18" value="24a30">
+        <label class="form-check-label">
+          24 a 30
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q18" value="30+">
+        <label class="form-check-label">
+          30+
+        </label>
+      </div>
+    </div>
+    <div class="q19">
+      <h5>19.- ¿En cuál año consideras que tuviste mayores ventas?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q19" checked value="2021">
+        <label class="form-check-label">
+          2021
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q19" value="2022">
+        <label class="form-check-label">
+          2022
+        </label>
+      </div>
+    </div>
+    <div class="q20">
+      <h5>20.- Considerando el año pasado vas...</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q20" checked value="mejor">
+        <label class="form-check-label">
+          Mejor
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q20" value="igual">
+        <label class="form-check-label">
+          Igual
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q20" value="peor">
+        <label class="form-check-label">
+          Peor
+        </label>
+      </div>
+    </div>
+    <button type="button" onclick="getValues()" class="btn btn-primary btn-lg btn-block">
+      Enviar
+    </button>
+  </div>
+</body>
+</html>
