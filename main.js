@@ -18,7 +18,7 @@ function getValues() {
   {
     Swal.fire({
       icon: "info",
-      title: "Falta que escribas tu nombre",
+      title: "Falta que escribas el nombre de tu empresa",
       confirmButtonColor: "#3085d6"
     })
     // async() => {
@@ -114,7 +114,7 @@ function sendData(array) {
       // };
       Swal.fire({
         icon: "error",
-        title: "Falta escribir tu nombre",
+        title: "Falta escribir el nombre de tu empresa",
         confirmButtonColor: "#3085d6"
       })
     });
