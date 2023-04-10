@@ -69,18 +69,18 @@ function sendData(array) {
     q18: `${array[17]}`,
     q19: `${array[18]}`,
     q20: `${array[19]}`,
-    companyName: `${array[20]}`,
-    staffName: `${array[21]}`,
+    staffName: `${array[20]}`,
+    companyName: `${array[21]}`,
     email: `${array[22]}`,
     phone: `${array[23]}`,
   });
 
   var config = {
     method: "post",
-    url: "https://encuestabustamante-2b23.restdb.io/rest/respuestas  ",
+    url: "https://sheet.best/api/sheets/32aacf91-902e-4e88-8d70-e596b2f41ceb/tabs/encuesta2023",
+    mode: "cors",
     headers: {
-      "x-apikey": "640670a2bc22d22cf7b25c78",
-      "Content-type": "application/json",
+      "Content-Type": "application/json",
     },
     data: data,
   };
