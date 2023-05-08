@@ -84,12 +84,23 @@ function sendData(array) {
       email: `${array[22]}`,
       phone: `${array[23]}`,
     });
-  
+    // sheet.best
+    // var config = {
+    //   method: "post",
+    //   url: "https://sheet.best/api/sheets/32aacf91-902e-4e88-8d70-e596b2f41ceb/tabs/encuesta2023",
+    //   mode: "cors",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   data: data,
+    // };
+    // restdb.io
     var config = {
       method: "post",
-      url: "https://sheet.best/api/sheets/32aacf91-902e-4e88-8d70-e596b2f41ceb/tabs/encuesta2023",
-      mode: "cors",
+      url: "https://responses-5389.restdb.io/rest/responses",
+      // mode: "cors",
       headers: {
+        "x-apikey": "63ea9066478852088da681dd",
         "Content-Type": "application/json",
       },
       data: data,
@@ -112,6 +123,7 @@ function sendData(array) {
         divToInsertHTMLTags.insertAdjacentElement("beforeend", notification);
       })
       .catch(async(err) => {
+        console.log(err)
         // const { value: accept} =
         // await Swal.fire({
         //   icon: "error",
