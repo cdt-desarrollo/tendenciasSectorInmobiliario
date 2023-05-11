@@ -85,26 +85,26 @@ function sendData(array) {
       phone: `${array[23]}`,
     });
     // sheet.best
-    // var config = {
-    //   method: "post",
-    //   url: "https://sheet.best/api/sheets/32aacf91-902e-4e88-8d70-e596b2f41ceb/tabs/encuesta2023",
-    //   mode: "cors",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   data: data,
-    // };
-    // restdb.io
     var config = {
       method: "post",
-      url: "https://responses-5389.restdb.io/rest/responses",
-      // mode: "cors",
+      url: "https://sheet.best/api/sheets/32aacf91-902e-4e88-8d70-e596b2f41ceb/tabs/encuesta2023",
+      mode: "cors",
       headers: {
-        "x-apikey": "63ea9066478852088da681dd",
         "Content-Type": "application/json",
       },
       data: data,
     };
+    // restdb.io
+    // var config = {
+    //   method: "post",
+    //   url: "https://responses-5389.restdb.io/rest/responses",
+    //   // mode: "cors",
+    //   headers: {
+    //     "x-apikey": "63ea9066478852088da681dd",
+    //     "Content-Type": "application/json",
+    //   },
+    //   data: data,
+    // };
   
     axios(config)
       .then((res) => {
