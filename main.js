@@ -87,7 +87,7 @@ function sendData(array) {
     // sheet.best
     var config = {
       method: "post",
-      url: "https://sheet.best/api/sheets/32aacf91-902e-4e88-8d70-e596b2f41ceb/tabs/encuesta2023",
+      url: "https://sheet.best/api/sheets/32aacf91-902e-4e88-8d70-e596b2f41ceb/tabs/encuesta2022",
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
